@@ -49,8 +49,8 @@ nightly = []
 gl_generator = "0.5"
 
 [dependencies.glutin]
-git = "https://github.com/jwilm/glutin"
-rev = "af7fe340bd4a2af53ea521defcb4f377cdc588cf"
+git = "https://github.com/will118/glutin"
+rev = "32e6aa80bf32880fbe4045918d82c3abb1c5b94f"
 
 [dev-dependencies]
 rustc-test = { version = "0.1", features = ["capture"] }
