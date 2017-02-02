@@ -50,7 +50,7 @@ gl_generator = "0.5"
 
 [dependencies.glutin]
 git = "https://github.com/will118/glutin"
-rev = "32e6aa80bf32880fbe4045918d82c3abb1c5b94f"
+rev = "0c98a483e75ae523a2b77453314fafdffd492724"
 
 [dev-dependencies]
 rustc-test = { version = "0.1", features = ["capture"] }
