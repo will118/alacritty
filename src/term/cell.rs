@@ -88,7 +88,7 @@ impl Cell {
     pub fn is_empty(&self) -> bool {
         self.c == ' ' &&
             self.bg == Color::Named(NamedColor::Background) &&
-            !self.flags.contains(INVERSE)
+            !self.flags.intersects(INVERSE | UNDERLINE)
     }
 
     #[inline]
@@ -124,7 +124,7 @@ mod tests {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "bench"))]
 mod benches {
     extern crate test;
     use super::Cell;

@@ -11,10 +11,6 @@ doc = false
 path = "src/main.rs"
 name = "alacritty"
 
-[[test]]
-name = "ref"
-harness = false
-
 [dependencies]
 libc = "*"
 cgmath = "0.7"
@@ -23,11 +19,11 @@ bitflags = "*"
 font = { path = "./font" }
 errno = "0.1.6"
 lazy_static = "0.2.2"
-parking_lot = { version = "0.3.1", features = ["nightly"] }
+parking_lot = "0.3.1"
 serde = "0.9"
 serde_yaml = "0.6"
 serde_derive = "0.9"
-vte = "0.2.1"
+vte = "0.2.2"
 mio = "0.6"
 serde_json = "0.9"
 copypasta = { path = "./copypasta" }
@@ -51,9 +47,6 @@ gl_generator = "0.5"
 [dependencies.glutin]
 git = "https://github.com/will118/glutin"
 rev = "0c98a483e75ae523a2b77453314fafdffd492724"
-
-[dev-dependencies]
-rustc-test = { version = "0.1", features = ["capture"] }
 
 [profile.release]
 lto = true

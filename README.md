@@ -38,7 +38,6 @@ The only supported installation method at this time is from source. Proper insta
 ```sh
 git clone https://aur.archlinux.org/alacritty-git.git
 cd alacritty-git
-pacman -S rustup # needed until Rust 1.15 is available (see PR #131)
 makepkg -isr
 ```
 
@@ -55,16 +54,11 @@ makepkg -isr
    cd alacritty
    ```
 
-3. Make sure you have the right Rust compiler installed. Alacritty requires nightly Rust. Run
+3. Make sure you have the right Rust compiler installed. Alacritty requires at least 1.15. Run
 
    ```sh
-   rustup override set nightly
-   ```
-
-   If you run into problems, you can try a known-good version of the compiler by running
-
-   ```sh
-   rustup override set $(<rustc-version)
+   rustup override set stable
+   rustup update stable
    ```
 
 #### Ubuntu
@@ -177,9 +171,9 @@ is created once alacritty is first run. On most systems this often defaults
 to `$HOME/.config/alacritty/alacritty.yml`.
 
 Many configuration options will take effect immediately upon saving changes to
-the config file. The only exception is the `font` and `dpi` section which
-requires Alacritty to be restarted. For further explanation of the config file,
-please consult the comments in the default config file.
+the config file. The only exception is the `font`, `dimensions` and `dpi` sections
+which requires Alacritty to be restarted. For further explanation of the config
+file, please consult the comments in the default config file.
 
 ## Issues (known, unknown, feature requests, etc)
 
